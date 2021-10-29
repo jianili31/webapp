@@ -1,0 +1,16 @@
+<!doctype html>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+	<h1>Message Bank</h1>
+  <!-- <b>Navigation:</b> -->
+	<ul style="list-style-type:none;">
+		<li><a href="{{ url_for('submit') }}">Submit a message</a></li>
+		<li><a href="{{ url_for('view') }}">View messages</a></li>
+	</ul>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% block content %}{% endblock %}
+</section>
